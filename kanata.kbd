@@ -1,0 +1,27 @@
+(defsrc
+  grv  1    2    3    4    5    6    7    8    9    0    -    =    bspc
+  tab  q    w    e    r    t    y    u    i    o    p    [    ]    \
+  caps a    s    d    f    g    h    j    k    l    ;    '    ret
+  lsft z    x    c    v    b    n    m    ,    .    /    rsft
+  lctl lmet lalt           spc            ralt rmet rctl
+)
+
+(deflayer default
+  grv  1    2    3    4    5    6    7    8    9    0    -    =    bspc
+  tab  q    w    e    r    t    y    u    i    o    p    [    ]    \
+  esc a    s    d    f    g    h    j    k    l    ;    '    ret
+  lsft z    x    c    v    b    n    m    ,    .    /    rsft
+  lctl lmet lalt           @spaceFn            ralt rmet rctl
+)
+
+(defalias
+spaceFn (tap-hold 200 200 spc (layer-toggle spacefn))
+)
+
+( deflayer spacefn
+  grv  1    2    3    4    5    6    7    8    9    0    -    =    bspc
+  tab  M-q    S-9   pgup    S-0    t    y    S-[    up    bspc    p    [    ]    \
+  esc S-5    home    pgdn    end    =    ret    left    down    rght    ;    '    M-ret
+  lsft z    x    c    v    M-b    n    m    =    .    /    rsft
+  lctl lmet lalt           _            ralt rmet rctl
+)
